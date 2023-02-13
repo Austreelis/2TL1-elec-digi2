@@ -3,7 +3,9 @@
     "devshell": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
         "lastModified": 1675790942,
@@ -17,6 +19,18 @@
         "owner": "numtide",
         "repo": "devshell",
         "type": "github"
+      }
+    },
+    "firmware": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-WjH6A4MUlFiUpBHbDUtyi7b8P70bAyWdr7OGPrXSe1w=",
+        "type": "file",
+        "url": "http://micropython.org/download/rp2-pico/rp2-pico-latest.uf2"
+      },
+      "original": {
+        "type": "file",
+        "url": "http://micropython.org/download/rp2-pico/rp2-pico-latest.uf2"
       }
     },
     "flake-utils": {
@@ -36,22 +50,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1643381941,
-        "narHash": "sha256-pHTwvnN4tTsEKkWlXQ8JMY423epos8wUOhthpwJjtpc=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "5efc8ca954272c4376ac929f4c5ffefcc20551d5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixpkgs-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1673462183,
         "narHash": "sha256-ZMN2zEqr9i4xi8a33xAP8K3Txq7h4hqEIIfnaItrqZA=",
         "path": "/nix/store/isjacsynhdvp4xmv6wbhly5ydb5lj6mz-source",
@@ -66,7 +64,25 @@
     "root": {
       "inputs": {
         "devshell": "devshell",
-        "nixpkgs": "nixpkgs_2"
+        "firmware": "firmware",
+        "nixpkgs": "nixpkgs",
+        "rp2040js": "rp2040js"
+      }
+    },
+    "rp2040js": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1676227097,
+        "narHash": "sha256-GIcQHAX+sMj3G5uQfK7QMvggyMrNgK8rHfQS/S4VS2E=",
+        "owner": "wokwi",
+        "repo": "rp2040js",
+        "rev": "d8b369bbc322980f0f0972afb40739a920912058",
+        "type": "github"
+      },
+      "original": {
+        "owner": "wokwi",
+        "repo": "rp2040js",
+        "type": "github"
       }
     }
   },
